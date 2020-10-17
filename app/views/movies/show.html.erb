@@ -1,0 +1,27 @@
+<p class="c_show" style="text-align:center">
+  <strong>Title:</strong>
+  <%= @movies.title %>
+</p>
+
+<p class="c_show" style="text-align:center">
+  <strong>Rating:</strong>
+  <%= @movies.rating %>
+</p>
+
+<p class="c_show" style="text-align:center">
+  <strong>Description:</strong>
+  <%= @movies.descrition %>
+</p>
+
+<p class="c_show" style="text-align:center">
+  <strong>Release date:</strong>
+  <%= @movies.release_date %>
+</p>
+<br>
+<div class="center">
+<%= link_to '<button class="button_submit">Edit</button>'.html_safe, edit_movie_path(@movies) %>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<%= link_to '<button class="button_delete">Delete</button>'.html_safe, @movies,:method => :delete %>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<%= link_to '<button class="button_back">Back</button>'.html_safe, movies_path %>
+</div>
